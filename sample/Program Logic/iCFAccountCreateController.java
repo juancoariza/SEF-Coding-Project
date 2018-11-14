@@ -1,4 +1,4 @@
-package sample;
+package sample.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -31,15 +31,15 @@ public class iCFAccountCreateController {
     private Label acctText;
 
     @FXML
-    private Label mainNameLabel;
-
-    @FXML
-    private PasswordField mainNameInfo;
-
-    @FXML
     private PasswordField confirmPasswordInfo;
 
     @FXML
     private Label confirmPasswordLabel;
+
+    @FXML
+    private Label shortPasswordErrorMSG;
+
+    @FXML
+    private Label passwordMismatchErrorMSG;
 
 }

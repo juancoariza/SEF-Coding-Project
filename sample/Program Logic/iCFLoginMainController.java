@@ -1,24 +1,18 @@
-package sample;
+package sample.Controllers;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class iCFLoginMainController {
-
+public class iCFLoginMainController implements Initializable {
     @FXML
     private AnchorPane mainLoginScreen;
 
@@ -27,16 +21,6 @@ public class iCFLoginMainController {
 
     @FXML
     private Button loginButton;
-
-    @FXML
-    public void signInButtonClicked() throws Exception
-    {
-//Here I want call the new Scene(SignInGUI.fxml) in my old Stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iCodeFitMainOptions.fxml"));
-
-
-    }
-
 
     @FXML
     private Button signupButton;
@@ -56,24 +40,11 @@ public class iCFLoginMainController {
     @FXML
     private Label hook;
 
-    @FXML
-    public void newUserLogin(ActionEvent event) throws IOException {
+    @Override
+    public void initialize(URL url, ResourceBundle resBun) {
 
-        Parent iCFMainMenuParent = FXMLLoader.load(getClass().getResource("iCodeFitLogin1stTime.fxml"));
-        Scene iCFMainMenuScene = new Scene(iCFMainMenuParent);
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(iCFMainMenuScene);
-        window.show();
+        // kept for future use
 
     }
 
-
-    public void handle(ActionEvent event){
-
-    }
-
-    @FXML
-    private void initialize() {
-
-    }
 }
