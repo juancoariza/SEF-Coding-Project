@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="customWorkoutScreen" dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="574.0"
+           xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="sample.Controllers.customWorkoutScreenController">
+    <items>
+        <AnchorPane fx:id="workoutListGroupPane" minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="164.0">
+            <children>
+                <ListView fx:id="workoutListByGroup" layoutY="1.0" prefHeight="438.0" prefWidth="167.0"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="workoutDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <ListView fx:id="workoutListBySpecs" prefHeight="438.0" prefWidth="399.0"/>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

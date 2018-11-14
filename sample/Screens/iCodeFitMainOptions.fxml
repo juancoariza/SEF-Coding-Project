@@ -2,95 +2,82 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" side="BOTTOM" stylesheets="@iCodeFitMainOptionsStyle.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+         prefWidth="600.0" side="BOTTOM" stylesheets="@../Stylesheets/iCodeFitMainOptionsStyle.css"
+         tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="sample.Controllers.iCFMainOptionsController">
     <tabs>
-        <Tab text="Exercises">
+        <Tab text="Fit Hub">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                     <padding>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0"/>
                     </padding>
-               <children>
-                  <ImageView fitHeight="372.0" fitWidth="600.0">
-                     <image>
-                        <Image url="@sampleMainBackgroud.jpg" />
-                     </image>
-                  </ImageView>
-                  <GridPane layoutX="14.0" layoutY="14.0" prefHeight="349.0" prefWidth="574.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Pane fx:id="trainerExercises" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
-                           <children>
-                              <Label fx:id="ExeLabel1" layoutX="53.0" layoutY="59.0" text="Trainer Exercises" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="suggestedExercises" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="1">
-                           <children>
-                              <Label fx:id="ExeLabel2" layoutX="46.0" layoutY="59.0" text="Suggested Exercises" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="newExercises" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="2">
-                           <children>
-                              <Label fx:id="ExeLabel3" layoutX="58.0" layoutY="59.0" text="New Exercises" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="lastExercise" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.rowIndex="1">
-                           <children>
-                              <Label fx:id="ExeLabel4" layoutX="37.0" layoutY="50.0" text="Continue Last Exercise" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="loadMacroTool" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <children>
-                              <Label fx:id="ExeLabel5" layoutX="37.0" layoutY="50.0" text="Macronutrient Tracker" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="loadCalorieTool" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <children>
-                              <Label fx:id="ExeLabel6" layoutX="56.0" layoutY="50.0" text="Calorie Tracker" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="loadPlannerTool" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.rowIndex="2">
-                           <children>
-                              <Label fx:id="ExeLabel7" layoutX="54.0" layoutY="50.0" text="Exercise Planner" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="loadTrainerTips" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <children>
-                              <Label fx:id="ExeLabel8" layoutX="65.0" layoutY="50.0" text="Trainer Tips" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="accessResources" prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <children>
-                              <Label fx:id="ExeLabel9" layoutX="69.0" layoutY="50.0" text="Resources" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children>
+                    <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="440.0" prefWidth="574.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <Pane fx:id="selectWorkoutPane" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                                    <children>
+                                        <Label fx:id="ExeLabel1" layoutX="14.0" layoutY="14.0" text="Select Workouts"/>
+                                        <Button fx:id="selectWorkoutButton" layoutX="96.0" layoutY="181.0"
+                                                mnemonicParsing="false" text="Start Workouts"/>
+                                        <Label layoutX="26.0" layoutY="68.0"
+                                               text="Choose workouts based on your training style"/>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="customWorkoutPane" prefHeight="200.0" prefWidth="200.0" styleClass="pane"
+                                      GridPane.columnIndex="1">
+                                    <children>
+                                        <Label fx:id="ExeLabel2" layoutX="14.0" layoutY="14.0"
+                                               text="Create Custom Workout"/>
+                                        <Button fx:id="customWorkoutButton" layoutX="89.0" layoutY="181.0"
+                                                mnemonicParsing="false" text="Create a Workout"/>
+                                        <Label layoutX="58.0" layoutY="71.0" text="Create your own workout routine"/>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="nutritionStatsPane" prefHeight="200.0" prefWidth="200.0" styleClass="pane"
+                                      GridPane.rowIndex="1">
+                                    <children>
+                                        <Label fx:id="ExeLabel4" layoutX="14.0" layoutY="14.0" text="Nutrition Stats"/>
+                                        <Button fx:id="nutritionStatsButton" layoutX="91.0" layoutY="181.0"
+                                                mnemonicParsing="false" text="Check your Stats"/>
+                                        <Label layoutX="59.0" layoutY="70.0" text="View your progress and statistics"/>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="nutritionTrackerPane" prefHeight="200.0" prefWidth="200.0"
+                                      styleClass="pane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label fx:id="ExeLabel5" layoutX="14.0" layoutY="14.0"
+                                               text="Nutrition Tracker"/>
+                                        <Button fx:id="nutritionTrackerButton" layoutX="82.0" layoutY="181.0"
+                                                mnemonicParsing="false" text="Track your Nutrition"/>
+                                        <Label layoutX="18.0" layoutY="68.0"
+                                               text="Keep track of your meals and nutritional content"/>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </GridPane>
+                    </children>
                 </AnchorPane>
             </content>
         </Tab>
@@ -98,111 +85,8 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                     <padding>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0"/>
                     </padding>
-               <children>
-                  <ImageView fitHeight="370.0" fitWidth="600.0">
-                     <image>
-                        <Image url="@sampleMainBackgroud.jpg" />
-                     </image>
-                  </ImageView>
-                  <GridPane layoutX="14.0" layoutY="14.0" prefHeight="352.0" prefWidth="577.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Pane fx:id="feedMSG1" prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@iCodeFitMainOptionsStyle.css">
-                           <children>
-                              <Label layoutX="14.0" layoutY="15.0" text="the_zucc achieved a new milestone" />
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="32.0" pickOnBounds="true" styleClass="img">
-                                 <image>
-                                    <Image url="@feedUser1.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label layoutX="111.0" layoutY="49.0" text="Lifted 75lbs for 10 reps at the incline press" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="feedMSG2" prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@iCodeFitMainOptionsStyle.css" GridPane.rowIndex="1">
-                           <children>
-                              <Label layoutX="19.0" layoutY="14.0" text="stallMan achieved a new milestone" />
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="29.0" layoutY="31.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@feedUser2.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label layoutX="109.0" layoutY="48.0" text="ran for 4.73 miles" />
-                           </children>
-                        </Pane>
-                        <Pane fx:id="feedMSG3" prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@iCodeFitMainOptionsStyle.css" GridPane.rowIndex="2">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="pepsilad_ created a new account" />
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="28.0" layoutY="31.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@feedUser3.jpg" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </Pane>
-                        <Pane fx:id="feedMSG4" prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@iCodeFitMainOptionsStyle.css" GridPane.rowIndex="3">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="IoriMoon12 posted a new status" />
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@feedUser4.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label layoutX="99.0" layoutY="48.0" text="&quot;Nothng like an evening stroll&quot;" />
-                           </children>
-                        </Pane>
-                     </children>
-                  </GridPane>
-               </children>
-                </AnchorPane>
-            </content>
-        </Tab>
-        <Tab text="Statistics">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <padding>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-                    </padding>
-               <children>
-                  <ImageView fitHeight="372.0" fitWidth="600.0">
-                     <image>
-                        <Image url="@sampleMainBackgroud.jpg" />
-                     </image>
-                  </ImageView>
-                  <Separator layoutX="12.0" layoutY="166.0" prefHeight="9.0" prefWidth="578.0" />
-                  <Separator layoutX="298.0" layoutY="12.0" orientation="VERTICAL" prefHeight="154.0" prefWidth="1.0" />
-                  <ImageView fx:id="sampleStackBar" fitHeight="150.0" fitWidth="278.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
-                     <image>
-                        <Image url="@StackedGraph.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="samplePie" fitHeight="150.0" fitWidth="278.0" layoutX="314.0" layoutY="14.0" pickOnBounds="true">
-                     <image>
-                        <Image url="@PieChart.jpg" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="12.0" layoutY="204.0" text="Daily Progress" />
-                  <Label layoutX="298.0" layoutY="204.0" text="Daily Progress" />
-                  <Label layoutX="14.0" layoutY="178.0" text="Calorie Counter" />
-                  <Label layoutX="300.0" layoutY="178.0" text="Macronutrient Counter" />
-                  <TextField layoutX="13.0" layoutY="252.0" />
-                  <TextField layoutX="13.0" layoutY="305.0" />
-                  <TextField layoutX="299.0" layoutY="252.0" />
-                  <TextField layoutX="299.0" layoutY="305.0" />
-                  <Label layoutX="14.0" layoutY="235.0" text="meal type" />
-                  <Label layoutX="300.0" layoutY="235.0" text="food type" />
-                  <Label layoutX="14.0" layoutY="288.0" text="approx. calories" />
-                  <Label layoutX="300.0" layoutY="288.0" text="portion size" />
-               </children>
                 </AnchorPane>
             </content>
         </Tab>
@@ -210,52 +94,58 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                     <padding>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0"/>
                     </padding>
-               <children>
-                  <ImageView fitHeight="373.0" fitWidth="600.0">
-                     <image>
-                        <Image url="@sampleMainBackgroud.jpg" />
-                     </image>
-                  </ImageView>
-                  <Accordion layoutX="35.0" layoutY="36.0" prefHeight="319.0" prefWidth="540.0">
-                    <panes>
-                      <TitledPane animated="false" text="Workout">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <CheckBox layoutX="43.0" layoutY="32.0" mnemonicParsing="false" text="Show Caloric Progression (calories used per exercise)" />
-                                    <CheckBox layoutX="45.0" layoutY="72.0" mnemonicParsing="false" text="Suggest Workout Routines (for DIY)" />
-                                    <CheckBox layoutX="45.0" layoutY="116.0" mnemonicParsing="false" text="Set Reminders to Complete your Daily Workouts" />
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" text="Profile">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <CheckBox layoutX="23.0" layoutY="23.0" mnemonicParsing="false" text="Make Account Private (your personal stats will not be shared with others)" />
-                                    <CheckBox layoutX="23.0" layoutY="89.0" mnemonicParsing="false" text="Upload Data to Database" />
-                                    <CheckBox layoutX="23.0" layoutY="126.0" mnemonicParsing="false" text="Delete Account" />
-                                    <CheckBox layoutX="23.0" layoutY="54.0" mnemonicParsing="false" text="Remove Your Personal Trainer" />
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" text="Diet and Nutrition">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <CheckBox layoutX="14.0" layoutY="26.0" mnemonicParsing="false" text="Use Calorie Tracker Tool " />
-                                    <CheckBox layoutX="14.0" layoutY="61.0" mnemonicParsing="false" text="Suggest Meal Speficifics (breakfast, lunch, dinner, snacks)" />
-                                    <CheckBox layoutX="14.0" layoutY="97.0" mnemonicParsing="false" text="Calculate Macronutrients for each meal" />
-                                 </children></AnchorPane>
-                        </content>
-                      </TitledPane>
-                    </panes>
-                  </Accordion>
-               </children>
+                    <children>
+                        <Accordion layoutX="13.0" layoutY="14.0" prefHeight="440.0" prefWidth="574.0">
+                            <panes>
+                                <TitledPane animated="false" text="Workout">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <CheckBox layoutX="43.0" layoutY="32.0" mnemonicParsing="false"
+                                                          text="Show Caloric Progression (calories used per exercise)"/>
+                                                <CheckBox layoutX="45.0" layoutY="72.0" mnemonicParsing="false"
+                                                          text="Suggest Workout Routines (for DIY)"/>
+                                                <CheckBox layoutX="45.0" layoutY="116.0" mnemonicParsing="false"
+                                                          text="Set Reminders to Complete your Daily Workouts"/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Profile">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <CheckBox layoutX="23.0" layoutY="23.0" mnemonicParsing="false"
+                                                          text="Make Account Private (your personal stats will not be shared with others)"/>
+                                                <CheckBox layoutX="23.0" layoutY="89.0" mnemonicParsing="false"
+                                                          text="Upload Data to Database"/>
+                                                <CheckBox layoutX="23.0" layoutY="126.0" mnemonicParsing="false"
+                                                          text="Delete Account"/>
+                                                <CheckBox layoutX="23.0" layoutY="54.0" mnemonicParsing="false"
+                                                          text="Remove Your Personal Trainer"/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Diet and Nutrition">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <CheckBox layoutX="14.0" layoutY="26.0" mnemonicParsing="false"
+                                                          text="Use Calorie Tracker Tool "/>
+                                                <CheckBox layoutX="14.0" layoutY="61.0" mnemonicParsing="false"
+                                                          text="Suggest Meal Speficifics (breakfast, lunch, dinner, snacks)"/>
+                                                <CheckBox layoutX="14.0" layoutY="97.0" mnemonicParsing="false"
+                                                          text="Calculate Macronutrients for each meal"/>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                    </children>
                 </AnchorPane>
             </content>
         </Tab>
