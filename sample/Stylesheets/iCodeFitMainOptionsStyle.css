@@ -1,42 +1,44 @@
-/* Background color styling for entire AnchorPane */
+.tab {
+    -fx-pref-width: 191;
+} 
 
-.background {
-    -fx-background-color: #96fffd;
+.tab-header-background {
+    -fx-background-color:transparent;
 }
 
-/* Label Styling for stats screen's labels */
+/*.tab-pane{
+    -fx-padding: 0 -1 -1 -1;
+} */
 
-#macronutrientPieChart, #weightLossLineGraph {
-    -fx-font-size: 15px;
-    -fx-font-style: italic;
-    -fx-font-fill: #333333;
+.pane {
+	-fx-background-radius: 5.0;
+	-fx-padding: 8;
+	-fx-background-color: #f2f7f7;
+	-fx-border-color: #31353a;
+	-fx-border-radius: 5.0;
 }
 
-#currWeightGoalStatLabel, #currWeightStatLabel, #lastWorkoutStatLabel {
-    -fx-font-size: 15px;
-    -fx-font-style: italic;
-    -fx-font-weight: bold;
-
+.pane:hover {
+	-fx-background-color: #dd1e08;
 }
 
-#currWeightGoalVal, #currWeightVal, #lastWorkoutVal {
-    -fx-font-size: 15px;
-    -fx-font-style: italic;
-    -fx-underline: true;
-    -fx-text-fill: #3088d1;
-
+#feedMSG1:hover {
+	-fx-background-color: #a9b4c6;
 }
 
-/* Button styling */
-
-.button {
-    -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+#feedMSG2:hover {
+	-fx-background-color: #a9b4c6;
 }
 
-.button:hover {
-    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+#feedMSG3:hover {
+	-fx-background-color: #a9b4c6;
+}
+
+#feedMSG4:hover {
+	-fx-background-color: #a9b4c6;
+}
+
+.label {
+	-fx-font-size: 12px;
+	-fx-font-style: italic;
 }
