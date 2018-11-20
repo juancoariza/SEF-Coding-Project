@@ -12,122 +12,60 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="backgroudMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="500.0" prefWidth="600.0" stylesheets="@../Stylesheets/iCodeFitLogin1stTimeStyle.css"
-            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.Controllers.iCFLogin1stTimeController">
+<AnchorPane fx:id="backgroudMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../Stylesheets/iCodeFitLogin1stTimeStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.iCFLogin1stTimeController">
     <padding>
-        <Insets bottom="200.0" left="200.0" right="200.0" top="200.0"/>
+        <Insets bottom="200.0" left="200.0" right="200.0" top="200.0" />
     </padding>
     <children>
         <ImageView fitHeight="500.0" fitWidth="600.0" layoutX="1.0">
             <image>
-                <Image url="@sampleMainBackgroud.jpg"/>
+                <Image url="@../Images/sampleMainBackgroud.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="login1stTimeMsg" layoutX="152.0" layoutY="14.0" text="Select Your Training Style"/>
-        <GridPane fx:id="choice1" layoutX="32.0" layoutY="120.0" prefHeight="325.0" prefWidth="130.0" styleClass="grid">
+        <Label fx:id="login1stTimeMsg" layoutX="152.0" layoutY="14.0" text="Select Your Training Style" />
+        <GridPane fx:id="choice1" layoutX="14.0" layoutY="96.0" prefHeight="361.0" prefWidth="180.0" styleClass="grid">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="109.0" minHeight="10.0" prefHeight="109.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="156.0" minHeight="0.0" prefHeight="142.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="204.0" minHeight="1.0" prefHeight="48.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="260.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="120.0" minHeight="0.0" prefHeight="83.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button fx:id="trainer1Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0"
-                        text="Select Trainer 1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-                <ImageView fx:id="trainer1" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true">
-                    <image>
-                        <Image url="@../Images/Trainer1.jpg"/>
-                    </image>
-                </ImageView>
-                <TextArea fx:id="choice1Dialog" prefHeight="155.0" prefWidth="112.0"
-                          text="Cardio Training&#10;&#10;Choose this style&#10;for endurance,&#10;cardiovascular&#10;exercise, and&#10;heart health."
-                          GridPane.rowIndex="1"/>
+                <Button fx:id="trainer1Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select Trainer 1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <TextArea fx:id="choice2Dialog" prefHeight="155.0" prefWidth="112.0" text="         Weight Loss&#10;&#10;A style with strong focus&#10;on portion control and &#10;dietary routines.&#10;&#10;Concentrates on &#10;cardiovascular exercises,&#10;aerobics, and decreased&#10;calorie intake&#10;" />
             </children>
         </GridPane>
-        <GridPane fx:id="choice2" layoutX="171.0" layoutY="120.0" prefHeight="325.0" prefWidth="130.0"
-                  styleClass="grid">
+        <GridPane fx:id="choice2" layoutX="210.0" layoutY="96.0" prefHeight="361.0" prefWidth="180.0" styleClass="grid">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="260.0" minHeight="10.0" prefHeight="260.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="104.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button fx:id="trainer2Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0"
-                        text="Select Trainer 2" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-                <ImageView fx:id="trainer2" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true">
-                    <image>
-                        <Image url="@../Images/Trainer2.jpg"/>
-                    </image>
-                </ImageView>
-                <TextArea fx:id="choice2Dialog" prefHeight="155.0" prefWidth="112.0"
-                          text="Weight Loss&#10;&#10;A style with&#10;strong focus&#10;on portion &#10;control and &#10;dietary routines."
-                          GridPane.rowIndex="1"/>
+                <Button fx:id="trainer2Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select Trainer 2 " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextArea fx:id="choice3Dialog" prefHeight="155.0" prefWidth="112.0" text="         Mass Gain&#10;&#10;Become stronger and &#10;more adept to weightlifting&#10;and muscle mass growth.&#10;&#10;Concetrates on weighted &#10;exercises and increased &#10;calorie intake&#10;" />
             </children>
         </GridPane>
-        <GridPane fx:id="choice3" layoutX="310.0" layoutY="120.0" prefHeight="325.0" prefWidth="130.0"
-                  styleClass="grid">
+        <GridPane fx:id="choice3" layoutX="406.0" layoutY="96.0" prefHeight="361.0" prefWidth="180.0" styleClass="grid">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="147.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="262.0" minHeight="10.0" prefHeight="257.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button fx:id="trainer3Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0"
-                        text="Select Trainer 3 " GridPane.halignment="CENTER" GridPane.rowIndex="2"
-                        GridPane.valignment="CENTER"/>
-                <ImageView fx:id="trainer3" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true">
-                    <image>
-                        <Image url="@../Images/Trainer3.jpg"/>
-                    </image>
-                </ImageView>
-                <TextArea fx:id="choice3Dialog" prefHeight="155.0" prefWidth="112.0"
-                          text="Mass Gain&#10;&#10;Become stronger&#10;and more adept&#10;to weightlifting&#10;and muscle&#10;mass growth."
-                          GridPane.rowIndex="1"/>
+                <Button fx:id="trainer3Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Select Trainer 3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <TextArea fx:id="choice4Dialog" prefHeight="155.0" prefWidth="162.0" text="         Daily Exercise&#10;&#10;Follow along a &#10;hand-picked nutrition &#10;and exercise guide&#10;for enthusiasts.&#10;&#10;Concentrates on calorie&#10;balancing and regular&#10;exercise of all &#10;types&#10;&#10;&#10;" />
             </children>
         </GridPane>
-        <GridPane fx:id="choice4" layoutX="449.0" layoutY="120.0" prefHeight="325.0" prefWidth="130.0"
-                  styleClass="grid">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="147.0" vgrow="SOMETIMES"/>
-                <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES"/>
-            </rowConstraints>
-            <children>
-                <Button fx:id="trainer4Selected" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0"
-                        text="Select Trainer 4" GridPane.halignment="CENTER" GridPane.rowIndex="2"
-                        GridPane.valignment="CENTER"/>
-                <ImageView fx:id="trainer4" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true">
-                    <image>
-                        <Image url="@../Images/Trainer4.jpg"/>
-                    </image>
-                </ImageView>
-                <TextArea fx:id="choice4Dialog" prefHeight="155.0" prefWidth="112.0"
-                          text="Daily Exercise&#10;&#10;Follow along&#10;a hand-picked&#10;nutrition and&#10;exercise guide&#10;for enthusiasts."
-                          GridPane.rowIndex="1"/>
-            </children>
-        </GridPane>
-        <Button fx:id="noTrainerChoice" layoutX="204.0" layoutY="455.0" mnemonicParsing="false"
-                text="No, thanks. I'll make my own program"/>
-        <Label fx:id="subtitlePT1" layoutX="31.0" layoutY="50.0" prefHeight="30.0" prefWidth="538.0"
-               text="Choose from our preset Training Styles, or create your own">
+        <Label fx:id="subtitlePT1" layoutX="41.0" layoutY="50.0" prefHeight="30.0" prefWidth="538.0" text="Choose from one of our preset Training Styles to better guide your goals">
             <font>
-                <Font size="6.0"/>
+                <Font size="6.0" />
             </font>
         </Label>
-        <Label fx:id="subtitlePT2" layoutX="75.0" layoutY="80.0"
-               text="(you'll be able to change your options in Settings)"/>
     </children>
 </AnchorPane>
