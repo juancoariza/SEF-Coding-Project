@@ -3,6 +3,15 @@
 	-fx-background-size: cover;
 }
 
+#shortPasswordErrorMSG, #passwordMismatchErrorMSG, #invalidEmailErrorMSG {
+    -fx-font-size: 12px;
+    -fx-font-weight: italic;
+    -fx-text-fill: #d10808;
+    -fx-underline: true;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+
 .label {
     -fx-font-size: 20px;
     -fx-font-weight: italic;
@@ -23,7 +32,6 @@
 	-fx-fill: #818181;
 	-fx-font-style: italic;
 }
-
 
 .button {
     -fx-text-fill: white;
