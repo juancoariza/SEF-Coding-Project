@@ -2,6 +2,7 @@ package sample.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,10 +16,15 @@ import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class iCFLogin1stTimeController {
+public class iCFLogin1stTimeController implements Initializable {
 
-     @FXML
+    // used for a small menu to keep track of the user's training choice
+    int buttonChoice = 0;
+
+    @FXML
     private AnchorPane backgroudMain;
 
     @FXML
@@ -61,37 +67,55 @@ public class iCFLogin1stTimeController {
     private TextArea choice3Dialog;
 
     @FXML
-    private GridPane choice4;
-
-    @FXML
-    private Button trainer4Selected;
-
-    @FXML
-    private ImageView trainer4;
-
-    @FXML
-    private TextArea choice4Dialog;
-
-    @FXML
-    private Button noTrainerChoice;
-
-    @FXML
     private Label subtitlePT1;
 
     @FXML
     private Label subtitlePT2;
 
-    @FXML
-    private void handleButtonActionTrainerSelect (ActionEvent event) throws IOException {
 
-        // based on the button press from the five options (Trainer 1 - 4, Custom), save data will pass to respective datafiles
-		// and the program will load the main program.
-		
-        Parent homepageParent = FXMLLoader.load(getClass().getResource("sample/Screens/iCodeFitMainOptions.fxml"));
-        Scene homepageScene = new Scene(homepageParent);
-        Stage newStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        newStage.setScene(homepageScene);
-        newStage.show();
+    @FXML
+    public void sendDataFromTrainer1() {
+        ScreenManager.getInstance().switchToScreen("/Screens/iCodeFitMainOptions.fxml");
+
     }
-	
+
+    @FXML
+    public void sendDataFromTrainer2() {
+
+
+    }
+
+
+    @FXML
+    public void sendDataFromTrainer3() {
+
+
+    }
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        // prevents user from re-writing data in the options' TextArea(s). They are for display only.
+        choice1Dialog.setEditable(false);
+        choice2Dialog.setEditable(false);
+        choice3Dialog.setEditable(false);
+
+        // save preferences from user's choice of training style into the program depending on the button choice
+        switch (buttonChoice) {
+
+            case 1:
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+                break;
+
+            default:
+                buttonChoice = 0;
+                break;
+        }
+    }
 }
