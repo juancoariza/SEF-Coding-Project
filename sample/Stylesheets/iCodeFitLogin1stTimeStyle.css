@@ -1,9 +1,10 @@
+/* Background image styling*/
+
 .anchor {
-    -fx-background-image: url("sampleMainBackground.jpg");
 	-fx-background-size: cover;
 }
 
-
+/* Label Styling for login-related screens */
 .label {
     -fx-font-size: 20px;
     -fx-font-style: italic;
@@ -18,7 +19,14 @@
   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
 }
 
+#subtitlePT1 {
+    -fx-font-size: 15px;
+    -fx-font-family: "Lucida Sans";
+    -fx-fill: #818181;
+}
 
+
+/* Styling for the four-panel selection display */
 .grid {
 	-fx-background-radius: 5.0;
 	-fx-padding: 8;
@@ -39,10 +47,6 @@
 	-fx-background-color: #0d21d8;
 }
 
-#choice4:hover {
-	-fx-background-color: #d4d80d;
-}
-
 #choice1Dialog {
 	-fx-background-color: #ffffff;
 }
@@ -55,11 +59,8 @@
 	-fx-background-color: #f2f7f7;
 }
 
-#choice4Dialog {
-	-fx-background-color: #f2f7f7;
-}
 
-
+/* Button styling */
 
 .button {
     -fx-text-fill: white;
